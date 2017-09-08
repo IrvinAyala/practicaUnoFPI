@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Practica uno</title>
+
+</head>
+<body>
+  <label>Usuario:</label>
+  <input type="text" id="usuario">
+  <br><br>
+  <label>Contraseña:</label>
+  <input type="password" id="contra">
+  <br>
+  <input type="submit" value="Entrar" id="btn">
+  <br><br>
+  <label id="labelError"></label>
+  <script>
+
+  var date = new Date();
+  document.getElementById("btn").addEventListener("click", function(event){
+    if((document.getElementById("usuario").value==="admin") && (document.getElementById("contra").value==="admin")){
+      document.getElementById("labelError").innerHTML=date;
+    }else{
+      document.getElementById("labelError").innerHTML="Se ha producido un error al ingresar el usuario o contraseña";
+    }
+  });
+  </script>
+
+</body>
+</html>
