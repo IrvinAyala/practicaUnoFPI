@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practica Dos</title>
+  </head>
+  <body>
+
+      <h3>Caculadora</h3>
+      <label>Primer número:</label>
+      <input type="number" id="numeroUno">
+      <br>
+      <label>Segundo número:</label>
+      <input type="number" id="numeroDos">
+      <br><br>
+      <input type="submit" value="Suma" id="btnSuma">
+      <input type="submit" value="Resta" id="btnResta">
+      <input type="submit" value="Multiplicación" id="btnMultiplicacion">
+      <input type="submit" value="División" id="btnDivision">
+      <br><br>
+      <label id="labelResultado">esto debe cambiar</label>
+
+    <script>
+      var resultado=0;
+      document.getElementById("btnSuma").addEventListener("click", function(event){
+        resultado= (parseFloat(document.getElementById("numeroUno").value) + parseFloat((document.getElementById("numeroDos").value);
+        document.getElementById("labelResultado").innerHTML= ""+resultado;
+    });
+
+    </script>
+
+  </body>
+</html>
